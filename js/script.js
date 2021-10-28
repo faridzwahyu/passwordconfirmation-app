@@ -32,10 +32,8 @@ createPass.addEventListener("input", () => {
       alertIcon.style.color = "#d93025"; //merah
       alertIcon.classList.replace("fa-check-circle", "fa-exclamation-circle");
    } else {
-      alertText.innerText = "Confirm Password";
-      alertIcon.style.display = "block";
-      alertIcon.style.color = "#d93025"; //merah
-      alertIcon.classList.replace("fa-check-circle", "fa-exclamation-circle");
+      alertText.innerText = "Re-Type Password";
+      alertIcon.style.display = "none";
    }
 });
 
