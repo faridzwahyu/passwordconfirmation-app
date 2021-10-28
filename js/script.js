@@ -32,10 +32,10 @@ createPass.addEventListener("input", () => {
       alertIcon.style.color = "#d93025"; //merah
       alertIcon.classList.replace("fa-check-circle", "fa-exclamation-circle");
    } else {
-      alertText.innerText = "Very good";
+      alertText.innerText = "Confirm Password";
       alertIcon.style.display = "block";
-      alertIcon.style.color = "#32CD32"; //hijau
-      alertIcon.classList.replace("fa-exclamation-circle", "fa-check-circle");
+      alertIcon.style.color = "#d93025"; //merah
+      alertIcon.classList.replace("fa-check-circle", "fa-exclamation-circle");
    }
 });
 
@@ -45,7 +45,7 @@ confirmPass.addEventListener("input", () => {
    let confirmValue = confirmPass.value.trim();
 
    if (confirmValue === createValue && createValue.length >= 8) {
-      alertText.innerText = "Password matched";
+      alertText.innerText = "Very Good";
       alertIcon.style.display = "block";
       alertIcon.style.color = "#32CD32"; //hijau
       alertIcon.classList.replace("fa-exclamation-circle", "fa-check-circle");
@@ -54,7 +54,7 @@ confirmPass.addEventListener("input", () => {
       alertIcon.style.display = "block";
       alertIcon.style.color = "#d93025"; //merah
       alertIcon.classList.replace("fa-check-circle", "fa-exclamation-circle");
-   } else {
+   } else if (confirmValue !== createValue) {
       alertText.innerText = "Password didn't matched";
       alertIcon.style.display = "block";
       alertIcon.style.color = "#d93025"; //merah
